@@ -1,0 +1,17 @@
+{
+  "name": "npm-util",
+  "description": "A new Project...",
+  "main": "main.js",
+  "version": "0.0.1",
+  "scripts": {},
+  "author": "sunguoqiang",
+  "licence": "MIT",
+  "bin": {
+    "nut": "./bin.js"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1",
+    "dayjs": "^1.8.18"
+  }
+}
