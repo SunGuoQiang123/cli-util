@@ -5,12 +5,18 @@ const chalk = require('chalk');
 const dayjs = require('dayjs');
 const child_process = require('child_process');
 const appJson = require('./app.json');
+const { version } = require('./package.json');
 
 const registry_map = {
   taobao: 'https://registry.npm.taobao.org/',
   origin: 'https://registry.npmjs.org/',
   default: 'https://registry.npmjs.org/'
 };
+
+program.version(version, '-v, --version', 'output nut cli version');
+program
+  .option('-t, --test <name>', 'test commander option', 'sgq')
+  .option('-c, --cheese <type>', 'add the specified type of cheese', 'blue')
 
 program
   .command('use [name]')
@@ -80,3 +86,6 @@ program
 
 
 program.parse(process.argv);
+
+console.log('test: ', program.test);
+console.log('cheese: ', program.cheese);
